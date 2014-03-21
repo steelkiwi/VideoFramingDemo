@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Video Framing</string>
+    <string name="action_select">Choose a Video File</string>
+    <string name="fetchFrame">Fetching video frame..</string>
+    <string name="fetchFrames">Fetching video frames..</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_save">Save Frame</string>
+    <string name="saved">Frame is saved to %s</string>
+    <string name="saveNoStorage">External storage is unavailable</string>
+
+</resources>

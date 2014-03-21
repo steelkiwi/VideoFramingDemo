@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:com.skd.videoframing="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_select"
+        android:icon="@drawable/ic_create"
+        android:orderInCategory="101"
+        android:title="@string/action_select"
+        com.skd.videoframing:showAsAction="always"/>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="102"
+        android:title="@string/action_settings"
+        com.skd.videoframing:showAsAction="collapseActionView"/>
+
+</menu>
