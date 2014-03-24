@@ -36,7 +36,7 @@ public class ImageUtils {
 			@Override
 			public void onClick(View v) {
 				if (listener != null) {
-					listener.onFrameClicked((int) frameImg.getTag());
+					listener.onFrameClicked((Integer) frameImg.getTag());
 				}
 			}
 		});
