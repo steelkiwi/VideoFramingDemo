@@ -1,8 +1,5 @@
 package com.skd.videoframing;
 
-import com.skd.videoframing.async.FramesExtractorTask;
-import com.skd.videoframing.utils.FileUtils;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,7 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.widget.LinearLayout;
-import android.widget.Toast;
+
+import com.skd.videoframing.async.FramesExtractorTask;
+import com.skd.videoframing.utils.FileUtils;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -54,7 +53,7 @@ public class MainActivity extends ActionBarActivity {
         settingsItem.setOnMenuItemClickListener(new OnMenuItemClickListener() {
 			@Override
 			public boolean onMenuItemClick(MenuItem item) {
-				Toast.makeText(getApplicationContext(), "Settings", Toast.LENGTH_SHORT).show();
+				toSettings();
 				return true;
 			}
 		});
@@ -96,6 +95,11 @@ public class MainActivity extends ActionBarActivity {
 		i.putExtra(FrameActivity.PATH_ARG, path);
 		i.putExtra(FrameActivity.TIME_ARG, time);
 		startActivityForResult(i, FRAME_PREVIEW_INTENT);
+	}
+	
+	private void toSettings() {
+		Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+		startActivity(i);
 	}
 	
 }

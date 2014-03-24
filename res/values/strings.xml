@@ -5,9 +5,32 @@
     <string name="action_select">Choose a Video File</string>
     <string name="fetchFrame">Fetching video frame..</string>
     <string name="fetchFrames">Fetching video frames..</string>
-    <string name="action_settings">Settings</string>
     <string name="action_save">Save Frame</string>
     <string name="saved">Frame is saved to %s</string>
     <string name="saveNoStorage">External storage is unavailable</string>
+    <string name="action_settings">Settings</string>
+    <string name="prefs_deltaTimeKey">pref_FrameDeltaTime</string>
+    <string name="prefs_deltaTime">Frames frequency</string>
+    <string name="prefs_deltaTimeDesc">Set frames frequency</string>
+    <string name="prefs_Time5">5</string>
+
+    <string-array name="prefs_TimeEntries">
+        <item name="prefs_Time1">1 second</item>
+        <item name="prefs_Time2">2 seconds</item>
+        <item name="prefs_Time5">5 seconds</item>
+        <item name="prefs_Time10">10 seconds</item>
+        <item name="prefs_Time30">30 seconds</item>
+        <item name="prefs_Time45">45 seconds</item>
+        <item name="prefs_Time60">60 seconds</item>
+    </string-array>
+    <string-array name="prefs_TimeValEntries">
+        <item name="prefs_Time1">1</item>
+        <item name="prefs_Time2">2</item>
+        <item name="prefs_Time5">5</item>
+        <item name="prefs_Time10">10</item>
+        <item name="prefs_Time30">30</item>
+        <item name="prefs_Time45">45</item>
+        <item name="prefs_Time60">60</item>
+    </string-array>
 
 </resources>

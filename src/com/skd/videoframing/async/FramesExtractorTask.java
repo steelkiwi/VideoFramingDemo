@@ -15,16 +15,19 @@ import android.widget.LinearLayout;
 import com.skd.videoframing.Frame;
 import com.skd.videoframing.OnFrameClickListener;
 import com.skd.videoframing.utils.ImageUtils;
+import com.skd.videoframing.utils.SharedPrefsUtils;
 
 public class FramesExtractorTask extends AsyncTask<String, Float, ArrayList<Frame>> {
 
-	private static final int DELTA_TIME = 5000000; //in microsecs
+	private final int delta_time; //in microsecs
 	
 	private final WeakReference<LinearLayout> framesViewReference;
 	private final WeakReference<OnFrameClickListener> listenerReference;
 	private ProgressDialog progressDlg;
 	
 	public FramesExtractorTask(LinearLayout framesView, OnFrameClickListener listener) {
+		this.delta_time = SharedPrefsUtils.getFramesFrequency(framesView.getContext())*1000000; //in microsecs
+		System.out.println(delta_time);
 		framesViewReference = new WeakReference<LinearLayout>(framesView);
 		listenerReference = new WeakReference<OnFrameClickListener>(listener);
 		createDialog(framesView.getContext());
@@ -44,7 +47,7 @@ public class FramesExtractorTask extends AsyncTask<String, Float, ArrayList<Fram
 	    int duration = getVideoDuration(s_duration);
 	    
 	    ArrayList<Frame> frames = new ArrayList<Frame>();
-	    for (int i=0; i<=duration; i+=DELTA_TIME) {
+	    for (int i=0; i<=duration; i+=delta_time) {
 	    	Bitmap frame_orig = mmr.getFrameAtTime(i, FFmpegMediaMetadataRetriever.OPTION_CLOSEST);
 	    	if (frame_orig == null) { 
 	    		setProgress(i, duration);
@@ -103,7 +106,7 @@ public class FramesExtractorTask extends AsyncTask<String, Float, ArrayList<Fram
 	}
 
 	private void setProgress(int cur, int duration) {
-		publishProgress((float)(cur + DELTA_TIME) / duration * 100);
+		publishProgress((float)(cur + delta_time) / duration * 100);
 	}
 	
 	@Override
