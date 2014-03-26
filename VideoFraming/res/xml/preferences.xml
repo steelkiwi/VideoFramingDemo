@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ListPreference
+        android:defaultValue="@string/prefs_Time5"
+        android:entries="@array/prefs_TimeEntries"
+        android:entryValues="@array/prefs_TimeValEntries"
+        android:key="@string/prefs_deltaTimeKey"
+        android:summary="@string/prefs_deltaTimeDesc"
+        android:title="@string/prefs_deltaTime" />
+
+</PreferenceScreen>

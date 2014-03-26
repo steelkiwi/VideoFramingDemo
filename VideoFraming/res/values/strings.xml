@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Video Framing</string>
+    <string name="intro">Tap \"+\" button to load video\nClick on a frame to preview\nTap \"↓\" button to save frame</string>
     <string name="action_select">Choose a Video File</string>
     <string name="fetchFrame">Fetching video frame..</string>
     <string name="fetchFrames">Fetching video frames..</string>
