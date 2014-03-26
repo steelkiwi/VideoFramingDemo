@@ -1,0 +1,1 @@
+The demo uses a reimplementation of Android's MediaMetadataRetriever class from the FFmpegMediaMetadataRetriever library available at https://github.com/wseemann/FFmpegMediaMetadataRetriever
